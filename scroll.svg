@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 24">
+  <rect x="1" y="1" width="14" height="22" rx="4" ry="4" fill="none" stroke="#000" style="stroke-width:2;" />
+  <line x1="8" y1="3" x2="8" y2="6" stroke="#000" style="stroke-width:2">
+    <animate id="a1_forward" begin="0;a1_backward.end" attributeName="y1" from="3" to="6" dur="500ms" />
+    <animate id="a2_forward" begin="0;a2_backward.end" attributeName="y2" from="6" to="9" dur="500ms" />
+    <animate id="a1_backward" begin="a1_forward.end" attributeName="y1" from="6" to="3" dur="500ms" />
+    <animate id="a2_backward" begin="a2_forward.end" attributeName="y2" from="9" to="6" dur="500ms" />
+  </line>
+</svg>

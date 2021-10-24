@@ -1,0 +1,291 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+* {
+  color: #333333;
+}
+
+a.fab, a.fas, a.title {
+  text-decoration: none;
+}
+
+body {
+  margin: 0px;
+  background-image: url(dots.svg);
+  background-repeat: repeat;
+}
+
+
+@media (min-width: 600pt) {
+  /* body {
+    margin: auto;
+    width: 75%;
+  } */
+  #header{
+    padding-right: 10%;
+    padding-left: 10%;
+    width: 80%;
+  }
+  #footer{
+    padding-right: 10%;
+    padding-left: 10%;
+    width: 80%;
+  }
+  .summary {
+    width: 500pt;
+  }
+  .cv {
+    width: 600pt;
+  }
+  .description-sub + .description-sub {
+    width:50%;
+  }
+}
+
+@media (max-width: 600pt) {
+  /* body {
+    margin: auto;
+    width: 95%;
+  } */
+  #header{
+    padding-right: 3%;
+    padding-left: 3%;
+    width: 94%;
+  }
+  #footer{
+    padding-right: 3%;
+    padding-left: 3%;
+    width: 94%;
+  }
+  .cv {
+    width: 95%;
+  }
+  .description-sub + .description-sub {
+    width:100%; 
+  }
+}
+
+/* Sticky header and footer */
+#header{
+  position:fixed;
+  top:0;
+}
+#footer{
+  position:fixed;
+  bottom:0;
+}
+#content {
+  padding-top: 80pt;
+  padding-bottom: 50pt;
+}
+
+.cv-container {
+  display: flex;
+  justify-content: center;
+}
+
+.cv section {
+  background: white;
+  margin-top: 30pt;
+  margin-bottom: 30pt;
+  padding: 30pt;
+  -webkit-box-shadow: 0px 3px 86px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 3px 86px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 3px 86px 0px rgba(0, 0, 0, 0.16);
+}
+
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, white 0%, white 55%, transparent);
+  padding-top: 10pt;
+  padding-bottom: 45pt;
+}
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: linear-gradient(to top, white 0%, white 50%, transparent);
+  padding-top:30pt;
+  padding-bottom:5pt;
+}
+
+#contact .link {
+  padding-left: 10pt;
+}
+
+#header .link {
+  display: flex;
+  font-size: 12pt; 
+  padding-left: 20pt;
+}
+
+#scroll img {
+  height: 25px;
+}
+
+.summary {
+  font-size: 18pt;
+}
+
+#name {
+  font-weight: bold;
+  font-size: 36pt;
+  padding-top:30pt;
+}
+
+#landing {
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 100pt;
+}
+
+#logo img {
+  width: 40pt;
+  height:40pt;
+}
+
+.position {
+  display:flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.emp-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emp-header .employer {
+  font-size: 28pt;
+  font-weight: bold;
+}
+
+.employment .title {
+  padding-right: 10pt;
+}
+
+.employment .address {
+  color: #999999;
+}
+
+.employment .title {
+  color: #2283ae;
+}
+
+.employment .period {
+  color: #2e5993;
+}
+
+
+.desc-title, .employment .title {
+  font-weight: bold;
+  color: #2283ae;
+}
+
+.employment .employer,
+.employment .address {
+  text-align: center;
+}
+
+.competencies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.competency-group {
+  min-width: 180pt;
+}
+
+.edu-source-date {
+  display: flex;
+  padding-top: 3pt;
+}
+
+.education .source {
+  color: #999999;
+  padding-right: 10pt;
+}
+
+.education .date {
+  color: #2283ae;
+}
+
+.education .name {
+  font-weight: bold;
+}
+
+.education .grade * {
+  color: #ffbf2b;
+}
+.education .grade span + span {
+  padding-left: 5pt;
+}
+
+ul.competency-group {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.competency-group li {
+  line-height: 200%;
+}
+
+#links .far {
+  font-size: 150%;
+  padding-right: 5pt;
+}
+
+.section-title {
+  display: flex;
+  justify-content: center;
+}
+
+.section-title .title {
+  color: #2283ae;
+  font-weight: bold;
+  font-size: 18pt;
+  line-height: 48pt;
+}
+
+.section-title .shadow{
+  position: absolute;
+  font-weight: bold;
+  font-size: 28pt;
+  /* filter: blur(1px); */
+  color: #F0F0F0;
+  z-index: -1;
+  letter-spacing: 2pt;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20pt;
+}
+
+
+.description {
+  display: flex;
+  flex-wrap: wrap;
+}
+.description-sub ul {
+  padding-left: 16pt;
+  margin-top: 6pt;
+}
+
+.employment + .employment {
+  padding-top: 20pt;
+  border-top: solid 1pt #dddddd;
+  margin-top: 20pt;
+}
