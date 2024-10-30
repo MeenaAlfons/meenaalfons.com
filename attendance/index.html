@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>QR Scanner</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <style>
+            * {
+                font-size: 16px;
+            }
+            body {
+                background-color: black;
+                color: white;
+            }
+            #start {
+                margin: 20px 0;
+            }
+            #startButton {
+                padding: 10px 20px;
+                font-size: 20px;
+            }
+            #qr-video-container {
+                position: relative;
+                width: 75vw;
+                height: 75vw;
+                margin: 0 auto;
+                overflow: hidden;
+                max-width: 400px;
+                max-height: 400px;
+            }
+            #qr-video {
+                width: 100%;
+                height: 100%;
+            }
+            #qr-video-overlay {
+                position: absolute;
+                border: min(9vw, 70px) solid rgba(0, 0, 0, 0.5);
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                pointer-events: none;
+                z-index: 1000;
+            }
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script src="bundle.js"></script>
+        <script>
+            const backendUrl = 'https://tamer-adly.ew.r.appspot.com/';
+            // const backendUrl = 'http://localhost:3001';
+            window.onload = () => {
+                initStartForm(backendUrl, 'record');
+            };
+        </script>
+        
+        <form id="start" action="">
+            <label for="password">Session</label>
+            <select id="session" name="session">
+                <!-- <option value=""></option> -->
+                <option value="Directing">Directing</option>
+                <option value="Cinematography">Cinematography</option>
+                <option value="Editing">Editing</option>
+                <!-- <option value=""></option> -->
+            </select>
+
+            <br/>
+            <br/>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <br/>
+            <br/>
+            <button id="startButton" type="submit">Start</button>
+            <br/>
+            <div id="error"></div>
+        </form>
+
+        <div id="qr-video-container" class="hidden">
+            <video id="qr-video"></video>
+            <div id="qr-video-overlay"></div>
+        </div>
+
+        <div id="scanError"></div>
+        <div id="scanResult"></div>
+    </body>
+</html>
